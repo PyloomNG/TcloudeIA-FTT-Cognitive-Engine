@@ -1,8 +1,6 @@
 # TcloudeIA — FTT Cognitive Engine
 
-**Status:** Research / Pre-Alpha
-**Language:** Python 3.10+
-**License:** MIT
+[Status](https://img.shields.io/badge/status-research%20%2F%20pre--alpha-orange) ![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
 > A domain-agnostic, Hebbian learning engine that uses **set-theory operations** (intersection, union, complement, Jaccard similarity) as its primary inference primitive — and produces an **editable graph of measurable sets** as output, not dense weight matrices.
 
