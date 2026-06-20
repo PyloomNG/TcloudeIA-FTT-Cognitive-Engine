@@ -1,0 +1,37 @@
+digraph CognitiveGraph {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontname="Helvetica"];
+  "LETTERS_UPPER" [label="LETTERS_UPPER\n[A, B, C...]", fillcolor="#cce5ff"];
+  "LETTERS_LOWER" [label="LETTERS_LOWER\n[a, b, c...]", fillcolor="#cce5ff"];
+  "VOWELS_UPPER" [label="VOWELS_UPPER\n[A, E, I...]", fillcolor="#cce5ff"];
+  "VOWELS_LOWER" [label="VOWELS_LOWER\n[a, e, i...]", fillcolor="#cce5ff"];
+  "CONSONANTS_UPPER" [label="CONSONANTS_UPPER\n[B, C, D...]", fillcolor="#cce5ff"];
+  "DIGITS" [label="DIGITS\n[0, 1, 2...]", fillcolor="#cce5ff"];
+  "LETTERS" [label="LETTERS\nConjunto de todas las letras d\n[A, B, C...]", fillcolor="#cce5ff"];
+  "CLUSTER_0" [label="CLUSTER_0\n[ a,  b,  c...]", fillcolor="#ffe5cc"];
+  "CLUSTER_1" [label="CLUSTER_1\n[CO_OCC:c959f603, CO_OCC:f8ef4ab4, LUM:DARK...]", fillcolor="#ffe5cc"];
+  "CLUSTER_2" [label="CLUSTER_2\n[CO_OCC:b56b57cf, LUM:DARK, PHASH:0000000000001000000111000010101000111110000111000000100000000000...]", fillcolor="#ffe5cc"];
+  "CLUSTER_3" [label="CLUSTER_3\n[CO_OCC:8c2a2483, LUM:DARK, PHASH:0000000000001100000111100001001000011110000111000000000000000000...]", fillcolor="#ffe5cc"];
+  "CLUSTER_4" [label="CLUSTER_4\n[CO_OCC:06c9b4d5, LUM:DARK, PHASH:0000000000111110001111100011111000111110000111000001110000011100...]", fillcolor="#ffe5cc"];
+  "CLUSTER_5" [label="CLUSTER_5\n[CO_OCC:ee1bb3a3, LUM:DARK, PHASH:0000000000011100001010100001110000111110001111100011111000011100...]", fillcolor="#ffe5cc"];
+  "LETTERS_UPPER" -> "LETTERS" [label="⊂"];
+  "LETTERS_LOWER" -> "LETTERS" [label="⊂"];
+  "VOWELS_UPPER" -> "LETTERS_UPPER" [label="⊂"];
+  "VOWELS_LOWER" -> "LETTERS_LOWER" [label="⊂"];
+  "CONSONANTS_UPPER" -> "LETTERS_UPPER" [label="⊂"];
+  "CLUSTER_0" -> "CLUSTER_1" [label="J=0.03", penwidth="0.50"];
+  "CLUSTER_0" -> "CLUSTER_2" [label="J=0.02", penwidth="0.50"];
+  "CLUSTER_0" -> "CLUSTER_3" [label="J=0.02", penwidth="0.50"];
+  "CLUSTER_0" -> "CLUSTER_4" [label="J=0.02", penwidth="0.50"];
+  "CLUSTER_0" -> "CLUSTER_5" [label="J=0.03", penwidth="0.50"];
+  "CLUSTER_1" -> "CLUSTER_2" [label="J=0.05", penwidth="0.50"];
+  "CLUSTER_1" -> "CLUSTER_3" [label="J=0.05", penwidth="0.50"];
+  "CLUSTER_1" -> "CLUSTER_4" [label="J=0.11", penwidth="0.50"];
+  "CLUSTER_1" -> "CLUSTER_5" [label="J=0.05", penwidth="0.50"];
+  "CLUSTER_2" -> "CLUSTER_3" [label="J=0.25", penwidth="0.75"];
+  "CLUSTER_2" -> "CLUSTER_4" [label="J=0.06", penwidth="0.50"];
+  "CLUSTER_2" -> "CLUSTER_5" [label="J=0.06", penwidth="0.50"];
+  "CLUSTER_3" -> "CLUSTER_4" [label="J=0.06", penwidth="0.50"];
+  "CLUSTER_3" -> "CLUSTER_5" [label="J=0.06", penwidth="0.50"];
+  "CLUSTER_4" -> "CLUSTER_5" [label="J=0.06", penwidth="0.50"];
+}
