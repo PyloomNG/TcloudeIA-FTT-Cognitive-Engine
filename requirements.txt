@@ -1,0 +1,9 @@
+# TcloudeIA — FTT Cognitive Engine
+# Core engine dependencies
+#
+# The engine core (engine/) runs on the Python standard library alone.
+# Pillow is only required by the image-domain extractors when loading
+# real PNG/JPG files, and only used by the training/run_image.py,
+# training/run_auto_cluster.py, and training/run_digits_arith.py demos.
+# All other modules and demos work without it.
+Pillow>=9.0
